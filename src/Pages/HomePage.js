@@ -1,10 +1,9 @@
 import React from "react";
-import Table from "../Components/Table";
+import PeopleTable from "../Components/PeopleTable";
 const HomePage = () => {
   return (
-    <div>
-      HOMEPAGE
-      <Table />
+    <div style={{ width: "100%" }}>
+      <PeopleTable url="starships" />
     </div>
   );
 };
