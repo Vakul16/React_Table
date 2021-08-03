@@ -3,9 +3,8 @@ import { DataGrid } from "@material-ui/data-grid";
 import axios from "axios";
 import Pagination from "@material-ui/core/Pagination";
 import Typography from "@material-ui/core/Typography";
-import Search from "./Search";
+// import Search from "./Search";
 import { makeStyles } from "@material-ui/styles";
-import { ClassNames } from "@emotion/react";
 const useStyles = makeStyles((theme) => ({
   root: {
     textDecoration: "none",

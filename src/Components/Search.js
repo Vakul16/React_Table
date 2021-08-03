@@ -20,7 +20,7 @@ const Search = ({ result }) => {
               setSearchTerm(e.target.value);
             }}
           />
-          {result
+          {/* {result
             .filter((val) => {
               if (searchTerm === "") {
                 return val;
@@ -36,7 +36,7 @@ const Search = ({ result }) => {
                   <li>{val.name}</li>
                 </div>
               );
-            })}
+            })} */}
         </Toolbar>
       </div>
     </>
