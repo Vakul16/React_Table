@@ -19,6 +19,7 @@ const Search = ({ result }) => {
             onChange={(e) => {
               setSearchTerm(e.target.value);
             }}
+            
           />
           {/* {result
             .filter((val) => {
