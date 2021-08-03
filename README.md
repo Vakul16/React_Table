@@ -71,3 +71,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # React_Table
 
+## Technolgies Used:
+
+### JavaScript, ReactJs, HTML & CSS and Material UI.
