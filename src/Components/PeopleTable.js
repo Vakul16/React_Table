@@ -3,7 +3,6 @@ import { DataGrid } from "@material-ui/data-grid";
 import axios from "axios";
 import Pagination from "@material-ui/core/Pagination";
 import Typography from "@material-ui/core/Typography";
-// import Search from "./Search";
 import { makeStyles } from "@material-ui/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,12 +59,9 @@ export default function PeopleTable(props) {
     setPage(page);
   }
   console.log(rowData);
-  // const searchData = Object.values(rowData);
-  // console.log(searchData);
   return (
     <>
       <div style={{ width: "100%" }}>
-        {/* <Search result={rowData} /> */}
         <DataGrid
           autoHeight={true}
           rows={addRowId(rowData)}
