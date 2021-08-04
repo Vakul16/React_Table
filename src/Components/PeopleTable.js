@@ -9,6 +9,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     marginLeft: "20px",
     width: "1310px",
+    boxShadow:
+      "0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19)",
   },
   bottom: {
     marginLeft: "20px",
