@@ -4,7 +4,7 @@ import axios from "axios";
 import Pagination from "@material-ui/core/Pagination";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/styles";
-import { collapseClasses } from "@material-ui/core";
+// import { collapseClasses } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     marginLeft: "20px",
@@ -77,6 +77,7 @@ export default function PeopleTable(props) {
         console.log(val);
         return val;
       }
+      return false;
     });
     setFilterRowData(newRowData);
   }, [searchTerm, rowData]);
