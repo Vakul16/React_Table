@@ -4,13 +4,27 @@ import axios from "axios";
 import Pagination from "@material-ui/core/Pagination";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/styles";
-// import { collapseClasses } from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
+import DropDown from "./DropDown";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+const theme = createTheme();
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginLeft: "20px",
-    width: "1310px",
-    boxShadow:
-      "0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19)",
+    // boxShadow:
+    //   "0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19)",
+  },
+  searchIconStyle: {
+    height: "40px",
+    width: "40px",
+    backgroundColor: "#9098aa",
+    borderRadius: "5px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  searchIcon: {
+    color: "#fff",
+    // backgroundColor: "pink",
   },
   bottom: {
     marginLeft: "20px",
@@ -21,9 +35,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 35,
   },
 }));
-export default function PeopleTable(props) {
+export default function Table(props) {
   const classes = useStyles();
-  const { url } = props;
+  // const { url } = props;
   const [rowData, setRowData] = React.useState([]);
   const [filterRowData, setFilterRowData] = React.useState([]);
   const [column, setColumn] = React.useState([]);
@@ -32,9 +46,10 @@ export default function PeopleTable(props) {
   const [page, setPage] = React.useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [pageSize, setPageSize] = React.useState(0);
+  const [names, setNames] = React.useState("people");
   React.useEffect(() => {
     axios
-      .get(`https://swapi.dev/api/${url}/?page=${page}`)
+      .get(`https://swapi.dev/api/${names}/?page=${page}`)
       .then((res) => {
         // console.log(res.data.results);
         setRowData(res.data.results);
@@ -44,7 +59,7 @@ export default function PeopleTable(props) {
         setPageSize(res.data.results.length);
       })
       .catch((err) => console.log(err));
-  }, [page, url]);
+  }, [page, names]);
 
   function arrayToObject(arr) {
     let newArr = [];
@@ -87,17 +102,24 @@ export default function PeopleTable(props) {
   return (
     <>
       <div className={classes.root}>
-        <div className="search">
+        <div className="inner-container">
+          <h4>SEARCH:</h4>
           <input
             id="filled-basic"
             // label="Filled"
             className="form-control"
             variant="filled"
             type="text"
-            placeholder="Search by any name"
+            placeholder="Search by any Name"
             value={searchTerm}
             onChange={handleSearchChange}
           />
+          <div className={classes.searchIconStyle}>
+            <SearchIcon className={classes.searchIcon} />
+          </div>
+          <div className="dropdown">
+            <DropDown names={names} setNames={setNames} />
+          </div>
         </div>
         <DataGrid
           autoHeight={true}
