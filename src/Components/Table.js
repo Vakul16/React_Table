@@ -6,8 +6,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/styles";
 import SearchIcon from "@material-ui/icons/Search";
 import DropDown from "./DropDown";
-import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-const theme = createTheme();
+// import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+// const theme = createTheme();
 const useStyles = makeStyles((theme) => ({
   root: {
     // boxShadow:
