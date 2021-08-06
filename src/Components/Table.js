@@ -14,13 +14,14 @@ const useStyles = makeStyles((theme) => ({
     //   "0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19)",
   },
   searchIconStyle: {
-    height: "40px",
-    width: "40px",
+    height: "45px",
+    width: "45px",
     backgroundColor: "#9098aa",
-    borderRadius: "5px",
+    borderRadius: "5px 10px 10px 5px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    cursor: "pointer",
   },
   searchIcon: {
     color: "#fff",
@@ -117,9 +118,7 @@ export default function Table(props) {
           <div className={classes.searchIconStyle}>
             <SearchIcon className={classes.searchIcon} />
           </div>
-          <div className="dropdown">
-            <DropDown names={names} setNames={setNames} />
-          </div>
+          <DropDown names={names} setNames={setNames} />
         </div>
         <DataGrid
           autoHeight={true}

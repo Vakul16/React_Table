@@ -9,15 +9,18 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "30px",
     display: "flex",
     alignItems: "center",
+    border: "none",
   },
   formControl: {
     backgroundColor: "#f4f4f4",
     borderRadius: "10px",
-    height: 40,
+    height: 45,
+    border: "none",
   },
   select: {
-    height: 40,
+    height: 45,
     width: 150,
+    border: "none",
   },
 }));
 export default function DropDown({ names, setNames }) {
@@ -48,6 +51,7 @@ export default function DropDown({ names, setNames }) {
           onOpen={handleOpen}
           onChange={handleChange}
           IconComponent={KeyboardArrowDownIcon}
+          inputProps={{ "aria-label": "Without label" }}
         >
           <MenuItem value={"people"}>People</MenuItem>
           <MenuItem value={"planets"}>Planets</MenuItem>
