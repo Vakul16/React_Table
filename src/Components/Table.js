@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     // boxShadow:
     //   "0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19)",
+    width: "96%",
   },
   searchIconStyle: {
     height: "45px",
@@ -29,11 +30,17 @@ const useStyles = makeStyles((theme) => ({
   },
   bottom: {
     marginLeft: "20px",
-    width: "80%",
+    width: "95%",
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "flex-end",
     marginTop: 35,
+    color: "#8F95A3",
+    // marginRight: 55,
+  },
+  bottomText: {
+    paddingLeft: 40,
+    // color: "#8F95A3",
   },
 }));
 export default function Table(props) {
@@ -139,7 +146,7 @@ export default function Table(props) {
           onChange={handleChange}
         />
         <Typography className={classes.bottomText}>
-          Total number of {totalCount} trials.
+          Total number of {totalCount} names
         </Typography>
       </div>
     </>

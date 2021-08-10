@@ -2,12 +2,67 @@
   font-weight: 800 !important;
   font-size: 14px;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/* .MuiDataGrid-root .MuiDataGrid-columnsContainer {
-
+/* .MuiDataGrid-root.MuiDataGrid-autoHeight {
+  width: 80%;
 } */
+.MuiDataGrid-root .MuiDataGrid-window {
+  /* background-color:red; */
+  margin-top: 25px !important;
+}
+.css-i4bv87-MuiSvgIcon-root {
+  color: #e1e1e1;
+  /* background-color: #fff; */
+}
+.MuiDataGrid-root .MuiDataGrid-iconSeparator {
+  height: 85px;
+}
+.MuiDataGrid-root .MuiDataGrid-columnHeader {
+  min-width: 80px !important;
+}
+.MuiDataGrid-root .MuiDataGrid-columnsContainer {
+  min-height: 80px !important;
+  max-height: 80px !important;
+  line-height: 80px !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-columnHeaderTitleContainer {
+  justify-content: center;
+}
+.MuiDataGrid-root .MuiDataGrid-columnHeader--sortable {
+  min-width: 260px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.MuiDataGrid-root
+  .MuiDataGrid-columnHeader:not(.MuiDataGrid-columnHeader--sorted)
+  .MuiDataGrid-sortIcon {
+  display: none;
+}
+
+.MuiDataGrid-root .MuiDataGrid-cell--textCenter.MuiDataGrid-cell--withRenderer,
+.MuiDataGrid-root .MuiDataGrid-cell--textCenter.MuiDataGrid-cell--editing {
+  min-width: 80px !important;
+}
+.MuiDataGrid-windowContainer {
+  height: 479px !important;
+}
+.MuiDataGrid-root .MuiDataGrid-row {
+  min-height: 20px !important;
+  max-height: 40px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.MuiDataGrid-root .MuiDataGrid-cell--textLeft {
+  min-width: 260px !important;
+  text-align: center !important;
+}
 .MuiDataGrid-root .MuiDataGrid-cell {
-  border-right: 1px solid red;
+  border-right: 1px solid #e0e0e0;
 }
 .inner-container {
   display: flex;
@@ -37,14 +92,14 @@
   color: #8f95a3;
 }
 .MuiDataGrid-root .MuiDataGrid-columnsContainer {
-  color: #393f4d;
-  background-color: #d3d3d3;
+  color: #383e4c;
+  background-color: #f2f2f2;
 }
 .MuiDataGrid-root .MuiDataGrid-row:nth-of-type(even) {
   background-color: #f1fafd;
 }
 .MuiDataGrid-root .MuiDataGrid-cell {
-  color: #929fae;
+  color: #9499a7;
   border-bottom: none !important;
   font-size: 14px;
 }
